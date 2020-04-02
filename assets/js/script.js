@@ -1,16 +1,17 @@
 /* Pattern 1 =================================================================== */
 var p1 = 4;
+var i, j;
 // Loop
-for (var i = 1; i <= p1; i++) {
+for (i = 1; i <= p1; i++) {
   // Spacing
-  for (var j = p1 - 1; j >= i; j--) {
+  for (j = p1 - 1; j >= i; j--) {
     document.getElementById('pattern1').innerHTML += "&nbsp;&nbsp;";
   }
   // Printing
-  for (var j = 1; j <= 2 * i - 1; j++) {
-    if (j % 2 == 0) {
+  for (j = 1; j <= 2 * i - 1; j++) {
+    if (j % 2 == 0) { // for Printing A on even Position of every line
       document.getElementById('pattern1').innerHTML += "A";
-    } else {
+    } else { // for Printing A on odd Position of every line
       document.getElementById('pattern1').innerHTML += "*";
     }
   }
@@ -26,7 +27,7 @@ for (i = 1; i <= p2; i++) {
   // Printing
   for (j = 1; j <= 9; j++) {
     if ((i == 5) || (i + j == 6) || (j - i == 4)) {
-      document.getElementById('pattern2').innerHTML += "*";
+      document.getElementById('pattern2').innerHTML += "*"; // Print * if given condition is true
     } else {
       document.getElementById('pattern2').innerHTML += "&nbsp;&nbsp;"; // Spacing
     }
@@ -57,40 +58,45 @@ for (i = 1; i <= p4; i++) {
     k--;
   }
   for (j = 1; j <= 10; j++) {
-    if ((j <= 6 - k) || (j >= 5 + k)) {
+    if ((j <= 6 - k) || (j >= 5 + k)) { // for Printing *
       document.getElementById('pattern4').innerHTML += "*";
-    } else {
+    } else { // Spacing
       document.getElementById('pattern4').innerHTML += "&nbsp;&nbsp;";
     }
   }
+  //   Line Break
   document.getElementById('pattern4').innerHTML += "<br>";
 }
 
 /* Pattern5 =================================================================== */
 var p5 = 5;
-var i, j, k, l;
-for (var i = 1; i <= p5; i++) {
-  for (var j = 1; j <= i; j++) {
-    document.getElementById('pattern5').innerHTML += "*";
+var i, j;
+// Print upper half of the pattern
+for (i = 1; i <= p5; i++) {
+  for (j = 1; j <= i; j++) {
+    document.getElementById('pattern5').innerHTML += "*"; // Print *
   }
-  for (var k = (2 * i - 2); k <= (2 * p5 - 3); k++) {
-    document.getElementById('pattern5').innerHTML += "&nbsp;&nbsp;";
+  for (j = (2 * i - 2); j <= (2 * p5 - 3); j++) {
+    document.getElementById('pattern5').innerHTML += "&nbsp;&nbsp;"; // Spacing
   }
-  for (var l = 1; l <= i; l++) {
-    document.getElementById('pattern5').innerHTML += "*";
+  for (j = 1; j <= i; j++) {
+    document.getElementById('pattern5').innerHTML += "*"; // Print *
   }
+  // Line Break
   document.getElementById('pattern5').innerHTML += "<br>";
 }
-for (var i = 1; i <= p5; i++) {
-  for (var j = i; j <= p5; j++) {
-    document.getElementById('pattern5').innerHTML += "*";
+// Print lower half of the pattern
+for (i = 1; i <= p5; i++) {
+  for (j = i; j <= p5; j++) {
+    document.getElementById('pattern5').innerHTML += "*"; // Print *
   }
-  for (var k = 1; k <= (2 * i - 2); k++) {
-    document.getElementById('pattern5').innerHTML += "&nbsp;&nbsp;";
+  for (j = 1; j <= (2 * i - 2); j++) {
+    document.getElementById('pattern5').innerHTML += "&nbsp;&nbsp;"; // Spacing
   }
-  for (var l = i; l <= p5; l++) {
-    document.getElementById('pattern5').innerHTML += "*";
+  for (j = i; j <= p5; j++) {
+    document.getElementById('pattern5').innerHTML += "*"; // Print *
   }
+  // Line Break
   document.getElementById('pattern5').innerHTML += "<br>";
 }
 
@@ -120,11 +126,11 @@ for (var i = 1; i <= p7; i++) {
   for (var j = 1; j <= 2 * i - 1; j++) {
     if (j <= i) {
       num++;
-      document.getElementById('pattern7').innerHTML += num;
+      document.getElementById('pattern7').innerHTML += num; // Print num in ascending
     }
     else {
       num--;
-      document.getElementById('pattern7').innerHTML += num;
+      document.getElementById('pattern7').innerHTML += num; // Print num in descending
     }
   }
   // Line Break
