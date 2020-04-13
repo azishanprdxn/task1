@@ -1,0 +1,11 @@
+p { padding-left: 12px; }
+
+ol {
+  margin: 0;
+  padding: 24px;
+}
+
+ol li {
+  padding-bottom: 24px;
+  padding-left: 24px;
+}
